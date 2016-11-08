@@ -1,0 +1,33 @@
+<html>
+    <head>
+	<title>{{title}}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Language" content="en">
+
+	<link rel="stylesheet" href="/css/bootstrap.css"></link>
+	<link rel="stylesheet" href="/css/style.css"></link>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+      <div class="navbar">
+        <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/users/">Users</a></li>
+      <li><a href="/newuser/">New User</a></li>
+      <li><a href="/blogposts/">Blogposts</a></li>
+    </ul>
+    </div>
+	{{>header}}
+	<div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    {{{ body }}}
+                </div>
+            </div>
+        </div>
+  {{>footer}}
+    </body>
+</html>

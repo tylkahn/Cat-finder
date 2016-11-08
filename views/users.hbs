@@ -1,0 +1,11 @@
+<div>
+  This is for the users
+</div>
+{{bodytext}}
+{{#each userlist}}
+<div class="boxed">
+  <div class="table">
+    Name: {{this.firstname}}, Email: {{this.email}}
+  </div>
+</div>
+{{/each}}

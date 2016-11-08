@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: green;
+  background-image: url(http://www.cats.org.uk/uploads/branches/211/5507692-cat-m.jpg);
+}
+
+.row table tbody {
+  color: red;
+}
+
+a {
+  color: #00B7FF;
+}
+.boxed {
+  color: orange;
+  font-size: 18px;
+}
+
+.navbar li {
+  display: inline;
+  float: left;
+}
+a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+li a:hover {
+    background-color: green;
+}
