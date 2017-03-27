@@ -9,23 +9,35 @@ body {
   color: red;
 }
 
-a {
-  color: #00B7FF;
-}
 .boxed {
   color: orange;
   font-size: 18px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-.navbar li {
-  display: inline;
-  float: left;
+li {
+    float: left;
+    border-right:1px solid #bbb;
 }
-a {
+
+li a {
     display: block;
-    padding: 8px;
-    background-color: #dddddd;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-li a:hover {
-    background-color: green;
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
 }

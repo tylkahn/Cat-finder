@@ -6,19 +6,21 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var login = require('./routes/login');
+var signup = require('./routes/signup');
 var adduser = require('./routes/adduser');
-var newuser = require('./routes/newuser');
-var blogposts = require('./routes/blogposts');
-var newblogposts = require('./routes/newblogposts');
+var userlogin = require('./routes/userlogin');
+var games = require('./routes/games');
+var leaderboard = require('./routes/leaderboard');
+//var leaders = require('./routes/leaders');
 var mongo = require('mongodb');
 var monk = require('monk');
 
-// var dbaddress = 'localhost:27017/test'
-var dbaddress = process.env.MONGO_URL;
-if (! dbaddress) {
-  throw new Error("No MONGO_URL environment variable set!")
-}
+var dbaddress = 'localhost:27017/users'
+//var dbaddress = process.env.MONGO_URL;
+// if (! dbaddress) {
+//   throw new Error("No MONGO_URL environment variable set!")
+// }
 console.log('Using DB Address: ' + dbaddress);
 var db = monk(dbaddress);
 
@@ -45,11 +47,13 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/login', login);
+app.use('/signup', signup);
 app.use('/adduser', adduser);
-app.use('/newuser', newuser);
-app.use('/blogposts', blogposts);
-app.use('/newblogposts', newblogposts)
+app.use('/userlogin', userlogin);
+app.use('/games', games);
+app.use('/leaderboard', leaderboard);
+//app.use('/leaders', leaders);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
